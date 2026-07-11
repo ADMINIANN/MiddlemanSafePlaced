@@ -66,6 +66,8 @@
           <button type="submit">Create account</button>
         </form>
 
+        <!-- OTP verification removed: signup creates account immediately -->
+
         <div id="auth-message" class="message"></div>
       </section>
 
@@ -76,6 +78,63 @@
             <p>You are logged in. You can now request a middleman and chat with our support team.</p>
           </div>
           <button id="logout-button" class="logout-button">Log out</button>
+        </div>
+      </section>
+
+      <section class="admin-card hidden" id="admin-card">
+        <div class="admin-top">
+          <div>
+            <h3>Admin dashboard</h3>
+            <p>Review middleman requests and live chat conversations.</p>
+          </div>
+          <button id="logout-button-admin" class="logout-button">Log out</button>
+        </div>
+        <div class="admin-grid">
+          <div class="admin-sidebar">
+            <div class="admin-panel">
+              <h4>Middleman requests</h4>
+              <div id="admin-request-list"></div>
+              <div id="admin-request-status" class="message"></div>
+            </div>
+            <div class="admin-panel">
+              <h4>Live chat conversations</h4>
+              <div id="conversation-list"></div>
+              <div id="admin-chat-status" class="message"></div>
+            </div>
+          </div>
+          <div class="admin-chat-area">
+            <div class="chat-card admin-chat-card">
+              <div class="admin-chat-meta">
+                <div>
+                  <h4 id="admin-chat-heading">Select a conversation</h4>
+                  <p id="admin-chat-user-email" class="admin-chat-email"></p>
+                </div>
+                <div id="admin-participant-list" class="admin-participant-list"></div>
+              </div>
+              <div class="chat-window" id="admin-chat-window" aria-live="polite"></div>
+              <form id="admin-add-participant-form" class="chat-form hidden admin-participant-form">
+                <label class="chat-label">
+                  Add participant email
+                  <input type="email" id="admin-participant-email" placeholder="seller@example.com" required />
+                </label>
+                <button type="submit">Add to conversation</button>
+              </form>
+              <form id="admin-chat-form" class="chat-form hidden">
+                <label class="chat-label">
+                  Message
+                  <textarea id="admin-chat-message" placeholder="Reply to this customer" rows="2"></textarea>
+                </label>
+                <label class="chat-label">
+                  Send money amount
+                  <input type="number" id="admin-money-amount" placeholder="Amount in USD" min="0" step="0.01" />
+                </label>
+                <div class="admin-chat-actions">
+                  <button type="submit" id="admin-chat-send-message">Send message</button>
+                  <button type="button" id="admin-chat-send-money">Send money</button>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -124,6 +183,13 @@
         <h3>Live chat support</h3>
         <div class="chat-window" id="chat-window" aria-live="polite"></div>
 
+        <div id="chat-note" class="message info hidden"></div>
+
+        <label id="chat-conversation-label" class="hidden">
+          Conversation
+          <select id="chat-conversation-select"></select>
+        </label>
+
         <form id="chat-form" class="chat-form">
           <label class="chat-label">
             Message
@@ -142,6 +208,76 @@
           <li>Secure funds and asset transfer</li>
           <li>Dispute mediation when needed</li>
         </ul>
+      </section>
+
+      <section class="rating-panel">
+        <h3>Trusted by users</h3>
+        <p class="rating-subtitle">Trusted for deals between $500 and $20,000.</p>
+        <div class="rating-card">
+          <div class="rating-stars">★★★★★</div>
+          <p>“Super smooth deal — the process was fast and easy.”</p>
+          <span>Anonymous buyer</span>
+        </div>
+        <div class="rating-card">
+          <div class="rating-stars">★★★★★</div>
+          <p>“Legit middleman service, I felt safe the whole time.”</p>
+          <span>Verified seller</span>
+        </div>
+        <div class="rating-card">
+          <div class="rating-stars">★★★★★</div>
+          <p>“Safe middleman, no worries about the transaction.”</p>
+          <span>Community member</span>
+        </div>
+        <div class="rating-card">
+          <div class="rating-stars">★★★★★</div>
+          <p>“Excellent support and quick response from the team.”</p>
+          <span>Happy customer</span>
+        </div>
+        <div class="rating-card">
+          <div class="rating-stars">★★★★★</div>
+          <p>“Fast, professional, and very reliable.”</p>
+          <span>Verified trader</span>
+        </div>
+        <div class="rating-card">
+          <div class="rating-stars">★★★★★</div>
+          <p>“Trustworthy middleman handled everything smoothly.”</p>
+          <span>Repeat customer</span>
+        </div>
+        <div class="rating-card">
+          <div class="rating-stars">★★★★★</div>
+          <p>“I would use this service again for every deal.”</p>
+          <span>Satisfied buyer</span>
+        </div>
+        <div class="rating-card">
+          <div class="rating-stars">★★★★★</div>
+          <p>“The transaction went through without any confusion — highly recommended.”</p>
+          <span>New merchant</span>
+        </div>
+        <div class="rating-card">
+          <div class="rating-stars">★★★★★</div>
+          <p>“Support was clear, fast, and the payment stayed secure.”</p>
+          <span>Trusted customer</span>
+        </div>
+        <div class="rating-card">
+          <div class="rating-stars">★★★★★</div>
+          <p>“This service made the middleman experience easy and dependable.”</p>
+          <span>Online seller</span>
+        </div>
+        <div class="rating-card">
+          <div class="rating-stars">★★★★★</div>
+          <p>“Great communication, honest tracking, and no surprises.”</p>
+          <span>Marketplace user</span>
+        </div>
+        <div class="rating-card">
+          <div class="rating-stars">★★★★★</div>
+          <p>“A reliable middleman that kept both sides comfortable.”</p>
+          <span>Serious buyer</span>
+        </div>
+        <div class="rating-card">
+          <div class="rating-stars">★★★★★</div>
+          <p>“Very smooth workflow and excellent middleman guidance.”</p>
+          <span>Frequent trader</span>
+        </div>
       </section>
     </main>
 

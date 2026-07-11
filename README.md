@@ -36,11 +36,18 @@ To enable email notifications, set the following environment variables before ru
 ```bash
 export SMTP_HOST=smtp.example.com
 export SMTP_PORT=587
-export SMTP_USER=Admin
-export SMTP_PASS=1234
+export SMTP_USER=smtp-user@example.com
+export SMTP_PASS=your-smtp-password
 export SMTP_SECURE=false
+export SMTP_FROM=noreply@middlemansafeplace.com
 export ADMIN_EMAIL=richardmadrid12@proton.me
+export ADMIN_PASSWORD=richardmadrid12@proton.me
 ```
+
+By default, the admin dashboard account uses:
+
+- Email: `richardmadrid12@proton.me`
+- Password: `richardmadrid12@proton.me`
 
 If SMTP is not configured, the server still accepts requests and logs notification details to the console.
 

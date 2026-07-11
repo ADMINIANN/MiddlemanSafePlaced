@@ -1,0 +1,286 @@
+{
+  "users": [
+    {
+      "id": "admin-michael",
+      "name": "Michael",
+      "email": "renzomarion@proton.me",
+      "passwordHash": "$2a$10$ZSWxBa5csASSmQB3iAa.NOnatgRgVTyEGB8.7lFUWi7/eD6YI23mS",
+      "isAdmin": true
+    },
+    {
+      "id": "admin",
+      "name": "Admin",
+      "email": "richardmadrid12@proton.me",
+      "passwordHash": "$2a$10$dDJSayri18gIaS4KtgdxJO7e7NHKydcLbkyzSBFo1GtJOt.d290A2",
+      "isAdmin": true
+    },
+    {
+      "id": "1783775041140",
+      "name": "yanacorrobitangcor14@gmail.com",
+      "email": "yanacorrobitangcor14@gmail.com",
+      "passwordHash": "$2a$10$n0rrvceaSMbgDpoEehb93OW9px8C1MctINLT15fHlK/rH2v7fJFW2",
+      "isAdmin": false,
+      "hasRequest": true
+    },
+    {
+      "id": "1783775075849",
+      "name": "Persist User",
+      "email": "persistuser@example.com",
+      "passwordHash": "$2a$10$VTB3OJAaL4ua9valqIuCPexrz/NJZsBAV./ooD6y6xHoEP5g31Hia",
+      "isAdmin": false
+    },
+    {
+      "id": "1783775548499",
+      "name": "corrojeff44@gmail.com",
+      "email": "corrojeff44@gmail.com",
+      "passwordHash": "$2a$10$7F9JWSwdlUJtvn6w6wcxdObj/bEdljBtsgs.28KZkCAwXdJygVzby",
+      "isAdmin": false,
+      "hasRequest": true
+    }
+  ],
+  "requests": [
+    {
+      "id": "1783775521029",
+      "createdAt": "2026-07-11T13:12:01.029Z",
+      "userId": "1783775041140",
+      "name": "yanacorrobitangcor14@gmail.com",
+      "email": "yanacorrobitangcor14@gmail.com",
+      "from": "a",
+      "to": "a",
+      "amount": "1",
+      "currency": "BTC",
+      "details": "a"
+    },
+    {
+      "id": "1783775555104",
+      "createdAt": "2026-07-11T13:12:35.104Z",
+      "userId": "1783775548499",
+      "name": "corrojeff44@gmail.com",
+      "email": "corrojeff44@gmail.com",
+      "from": "fwa",
+      "to": "a",
+      "amount": "1",
+      "currency": "USD",
+      "details": "a"
+    }
+  ],
+  "chatMessages": [
+    {
+      "id": "1783775522466-iayxyx",
+      "createdAt": "2026-07-11T13:12:02.466Z",
+      "userId": "1783775041140",
+      "name": "yanacorrobitangcor14@gmail.com",
+      "email": "yanacorrobitangcor14@gmail.com",
+      "sender": "customer",
+      "message": "a"
+    },
+    {
+      "id": "1783775555967-qj0xbz",
+      "createdAt": "2026-07-11T13:12:35.967Z",
+      "userId": "1783775548499",
+      "name": "corrojeff44@gmail.com",
+      "email": "corrojeff44@gmail.com",
+      "sender": "customer",
+      "message": "a"
+    },
+    {
+      "id": "1783775582531-o6iikl",
+      "createdAt": "2026-07-11T13:13:02.531Z",
+      "userId": "1783775548499",
+      "name": "corrojeff44@gmail.com",
+      "email": "corrojeff44@gmail.com",
+      "sender": "customer",
+      "message": "a"
+    },
+    {
+      "id": "1783775597727-mtp88t",
+      "createdAt": "2026-07-11T13:13:17.727Z",
+      "userId": "1783775041140",
+      "name": "Admin",
+      "sender": "admin",
+      "message": "awf"
+    },
+    {
+      "id": "1783775608589-htdf07",
+      "createdAt": "2026-07-11T13:13:28.589Z",
+      "userId": "1783775548499",
+      "name": "corrojeff44@gmail.com",
+      "email": "corrojeff44@gmail.com",
+      "sender": "customer",
+      "message": "Hello"
+    },
+    {
+      "id": "1783775612660-7igvj8",
+      "createdAt": "2026-07-11T13:13:32.660Z",
+      "userId": "1783775041140",
+      "name": "yanacorrobitangcor14@gmail.com",
+      "email": "yanacorrobitangcor14@gmail.com",
+      "sender": "customer",
+      "message": "aw"
+    },
+    {
+      "id": "1783775774515-ffbvg0",
+      "createdAt": "2026-07-11T13:16:14.515Z",
+      "userId": "1783775041140",
+      "name": "corrojeff44@gmail.com",
+      "email": "corrojeff44@gmail.com",
+      "sender": "customer",
+      "message": "a"
+    },
+    {
+      "id": "1783776482797-wu4q8u",
+      "createdAt": "2026-07-11T13:28:02.797Z",
+      "userId": "1783775548499",
+      "name": "Admin",
+      "sender": "admin",
+      "message": "fwa"
+    },
+    {
+      "id": "1783776546219-lt0ewb",
+      "createdAt": "2026-07-11T13:29:06.219Z",
+      "userId": "1783775548499",
+      "name": "Admin",
+      "sender": "admin",
+      "message": "41"
+    },
+    {
+      "id": "1783776552454-ptcf04",
+      "createdAt": "2026-07-11T13:29:12.454Z",
+      "userId": "1783775548499",
+      "name": "Admin",
+      "sender": "admin",
+      "message": "ta"
+    },
+    {
+      "id": "1783776804294-hk9v2q",
+      "createdAt": "2026-07-11T13:33:24.294Z",
+      "userId": "1783775041140",
+      "name": "Admin",
+      "sender": "admin",
+      "message": "Sent $1.00"
+    },
+    {
+      "id": "1783776852277-mlt3g8",
+      "createdAt": "2026-07-11T13:34:12.277Z",
+      "userId": "1783775041140",
+      "name": "yanacorrobitangcor14@gmail.com",
+      "email": "yanacorrobitangcor14@gmail.com",
+      "sender": "customer",
+      "message": "Sent $1.00"
+    },
+    {
+      "id": "1783776940260-yqae7r",
+      "createdAt": "2026-07-11T13:35:40.260Z",
+      "userId": "1783775041140",
+      "name": "Admin",
+      "sender": "admin",
+      "message": "Sent $1.00"
+    },
+    {
+      "id": "1783776982853-dzooaj",
+      "createdAt": "2026-07-11T13:36:22.853Z",
+      "userId": "1783775548499",
+      "name": "Admin",
+      "sender": "admin",
+      "message": "Sent $5.00"
+    },
+    {
+      "id": "1783776998375-knb94k",
+      "createdAt": "2026-07-11T13:36:38.375Z",
+      "userId": "1783775041140",
+      "name": "Admin",
+      "sender": "admin",
+      "message": "Sent $677.00"
+    },
+    {
+      "id": "1783777075634-s1r284",
+      "createdAt": "2026-07-11T13:37:55.634Z",
+      "userId": "1783775548499",
+      "name": "Admin",
+      "sender": "admin",
+      "message": "Sent $1.00"
+    },
+    {
+      "id": "1783777082105-avtlk1",
+      "createdAt": "2026-07-11T13:38:02.105Z",
+      "userId": "1783775548499",
+      "name": "Admin",
+      "sender": "admin",
+      "message": "41"
+    },
+    {
+      "id": "1783777084289-x9eurs",
+      "createdAt": "2026-07-11T13:38:04.289Z",
+      "userId": "1783775548499",
+      "name": "Admin",
+      "sender": "admin",
+      "message": "Sent $52562.00"
+    },
+    {
+      "id": "1783777133027-omeo3j",
+      "createdAt": "2026-07-11T13:38:53.027Z",
+      "userId": "1783775041140",
+      "name": "Admin",
+      "sender": "admin",
+      "message": "Sent $1.00"
+    },
+    {
+      "id": "1783777167427-8xd21j",
+      "createdAt": "2026-07-11T13:39:27.427Z",
+      "userId": "1783775041140",
+      "name": "Admin",
+      "sender": "admin",
+      "message": "Sent $41.00"
+    },
+    {
+      "id": "1783777229511-k65no2",
+      "createdAt": "2026-07-11T13:40:29.511Z",
+      "userId": "1783775548499",
+      "name": "Admin",
+      "sender": "admin",
+      "message": "Sent $1.00"
+    },
+    {
+      "id": "1783777234299-m69i2w",
+      "createdAt": "2026-07-11T13:40:34.299Z",
+      "userId": "1783775041140",
+      "name": "Admin",
+      "sender": "admin",
+      "message": "Sent $41.00"
+    },
+    {
+      "id": "1783777497020-6ycb06",
+      "createdAt": "2026-07-11T13:44:57.020Z",
+      "userId": "1783775041140",
+      "name": "Admin",
+      "sender": "admin",
+      "type": "money",
+      "amount": 1,
+      "message": "Sent $1.00"
+    },
+    {
+      "id": "1783777564702-kjrg7p",
+      "createdAt": "2026-07-11T13:46:04.702Z",
+      "userId": "1783775548499",
+      "name": "Michael",
+      "sender": "admin",
+      "type": "text",
+      "message": "wa"
+    },
+    {
+      "id": "1783777579586-21i76i",
+      "createdAt": "2026-07-11T13:46:19.586Z",
+      "userId": "1783775548499",
+      "name": "Michael",
+      "sender": "admin",
+      "type": "money",
+      "amount": 5252,
+      "message": "Sent $5252.00"
+    }
+  ],
+  "conversationParticipants": {
+    "1783775041140": [
+      "corrojeff44@gmail.com"
+    ]
+  }
+}
