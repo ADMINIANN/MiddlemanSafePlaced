@@ -4,7 +4,9 @@
   "description": "A simple website where customers can request a middleman through MiddlemanSafePlace.com.",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "deploy": "wrangler deploy",
+    "preview": "wrangler dev"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -17,5 +19,8 @@
   },
   "engines": {
     "node": ">=18"
+  },
+  "devDependencies": {
+    "wrangler": "^4.110.0"
   }
 }
