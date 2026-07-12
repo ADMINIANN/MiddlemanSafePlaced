@@ -276,6 +276,16 @@
       "type": "money",
       "amount": 5252,
       "message": "Sent $5252.00"
+    },
+    {
+      "id": "1783833948882-istc41",
+      "createdAt": "2026-07-12T05:25:48.882Z",
+      "userId": "1783775041140",
+      "name": "Admin",
+      "sender": "admin",
+      "type": "money",
+      "amount": 1,
+      "message": "Sent $1.00"
     }
   ],
   "conversationParticipants": {
