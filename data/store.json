@@ -36,6 +36,13 @@
       "passwordHash": "$2a$10$7F9JWSwdlUJtvn6w6wcxdObj/bEdljBtsgs.28KZkCAwXdJygVzby",
       "isAdmin": false,
       "hasRequest": true
+    },
+    {
+      "id": "1783834509037",
+      "name": "richardmadrid12@proton.me1",
+      "email": "richardmadrid12@proton.me11",
+      "passwordHash": "$2a$10$mWaLT7UnoVw/6sfwFwT9dOrPMH2ny4B/04mTUBj6HQWXe5DNRckqu",
+      "isAdmin": false
     }
   ],
   "requests": [
