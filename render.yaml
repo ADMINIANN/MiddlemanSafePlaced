@@ -2,7 +2,7 @@ services:
   - type: web
     name: MiddlemanSafePlace
     env: docker
-    branch: main
+    branch: cloudflare/workers-autoconfig
     dockerfilePath: Dockerfile
     plan: free
     autoDeploy: true

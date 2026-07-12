@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - cloudflare/workers-autoconfig
 
 jobs:
   build:
