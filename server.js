@@ -519,6 +519,10 @@ app.post('/api/admin/conversations/:userId/participants', requireAdmin, (req, re
   res.json({ success: true, participantEmails: participantList });
 });
 
+app.get('/api/*', (req, res) => {
+  res.status(404).json({ success: false, message: 'API route not found.' });
+});
+
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });

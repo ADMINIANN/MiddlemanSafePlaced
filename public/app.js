@@ -155,10 +155,28 @@ function formatRelativeTime(dateString) {
   return date.toLocaleString();
 }
 
+async function parseJsonResponse(response) {
+  const contentType = response.headers.get('content-type') || '';
+  if (contentType.includes('application/json')) {
+    return response.json();
+  }
+
+  const text = await response.text();
+  if (!text) {
+    return { success: false, message: 'The server returned an empty response.' };
+  }
+
+  try {
+    return JSON.parse(text);
+  } catch (error) {
+    return { success: false, message: text || 'Unexpected response from server.' };
+  }
+}
+
 async function loadAdminConversations() {
   try {
     const response = await fetch('/api/admin/conversations', { credentials: 'include' });
-    const result = await response.json();
+    const result = await parseJsonResponse(response);
     if (!response.ok) {
       throw new Error(result.message || 'Unable to load conversations.');
     }
@@ -174,7 +192,7 @@ async function loadAdminConversations() {
 async function loadAdminRequests() {
   try {
     const response = await fetch('/api/requests', { credentials: 'include' });
-    const result = await response.json();
+    const result = await parseJsonResponse(response);
     if (!response.ok) {
       throw new Error(result.message || 'Unable to load requests.');
     }
@@ -195,7 +213,7 @@ async function loadAdminRequests() {
 async function loadMyConversations() {
   try {
     const resp = await fetch('/api/my-conversations', { credentials: 'include' });
-    const data = await resp.json();
+    const data = await parseJsonResponse(resp);
     if (!resp.ok) throw new Error(data.message || 'Failed to load conversations');
     chatConversationSelect.innerHTML = '';
     // add user's own conversation as default
@@ -232,7 +250,7 @@ async function loadMyConversations() {
 async function loadConversationMessages(userId) {
   try {
     const response = await fetch(`/api/chats/${userId}`, { credentials: 'include' });
-    const result = await response.json();
+    const result = await parseJsonResponse(response);
     if (!response.ok) throw new Error(result.message || 'Unable to load conversation.');
     chatWindow.innerHTML = '';
     result.messages.forEach(renderChatMessage);
@@ -277,7 +295,7 @@ async function selectConversation(userId, userName = null) {
 
   try {
     const response = await fetch(`/api/admin/chats/${userId}`, { credentials: 'include' });
-    const result = await response.json();
+    const result = await parseJsonResponse(response);
     if (!response.ok) {
       throw new Error(result.message || 'Unable to load conversation.');
     }
@@ -438,7 +456,7 @@ function updateUI(user) {
 async function fetchCurrentUser() {
   try {
     const response = await fetch('/api/current-user', { credentials: 'include' });
-    const result = await response.json();
+    const result = await parseJsonResponse(response);
     updateUI(result.user || null);
   } catch (error) {
     console.error('Failed to check current user', error);
@@ -468,7 +486,7 @@ loginForm.addEventListener('submit', async (event) => {
       body: JSON.stringify(payload),
     });
 
-    const result = await response.json();
+    const result = await parseJsonResponse(response);
     if (!response.ok) {
       throw new Error(result.message || 'Unable to log in.');
     }
@@ -499,7 +517,7 @@ signupForm.addEventListener('submit', async (event) => {
       body: JSON.stringify(payload),
     });
 
-    const result = await response.json();
+    const result = await parseJsonResponse(response);
     if (!response.ok) {
       throw new Error(result.message || 'Unable to create account.');
     }
@@ -552,7 +570,7 @@ requestForm.addEventListener('submit', async (event) => {
       body: JSON.stringify(payload),
     });
 
-    const result = await response.json();
+    const result = await parseJsonResponse(response);
     if (!response.ok) {
       throw new Error(result.message || 'Unable to submit request.');
     }
@@ -620,14 +638,7 @@ adminAddParticipantForm.addEventListener('submit', async (event) => {
       body: JSON.stringify({ email }),
     });
 
-    const contentType = response.headers.get('content-type') || '';
-    let result;
-    if (contentType.includes('application/json')) {
-      result = await response.json();
-    } else {
-      const text = await response.text();
-      throw new Error(text || 'Unexpected non-JSON response from server.');
-    }
+    const result = await parseJsonResponse(response);
 
     if (!response.ok) {
       throw new Error(result.message || 'Unable to add participant.');
